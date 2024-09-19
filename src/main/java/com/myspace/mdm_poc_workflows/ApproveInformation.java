@@ -8,20 +8,16 @@ public class ApproveInformation implements java.io.Serializable {
 
 	static final long serialVersionUID = 1L;
 
-	@org.kie.api.definition.type.Label(value = "Approve?")
-	private java.lang.Boolean approve_flag;
-	@org.kie.api.definition.type.Label(value = "Reject reason")
+	@org.kie.api.definition.type.Label("Reject reason")
 	private java.lang.String reject_reason;
 
+	@org.kie.api.definition.type.Label("Solution")
+	private java.lang.String solution;
+
+	@org.kie.api.definition.type.Label(value = "Is Approve?")
+	private java.lang.Boolean is_approved;
+
 	public ApproveInformation() {
-	}
-
-	public java.lang.Boolean getApprove_flag() {
-		return this.approve_flag;
-	}
-
-	public void setApprove_flag(java.lang.Boolean approve_flag) {
-		this.approve_flag = approve_flag;
 	}
 
 	public java.lang.String getReject_reason() {
@@ -32,10 +28,27 @@ public class ApproveInformation implements java.io.Serializable {
 		this.reject_reason = reject_reason;
 	}
 
-	public ApproveInformation(java.lang.Boolean approve_flag,
-			java.lang.String reject_reason) {
-		this.approve_flag = approve_flag;
+	public java.lang.String getSolution() {
+		return this.solution;
+	}
+
+	public void setSolution(java.lang.String solution) {
+		this.solution = solution;
+	}
+
+	public java.lang.Boolean getIs_approved() {
+		return this.is_approved;
+	}
+
+	public void setIs_approved(java.lang.Boolean is_approved) {
+		this.is_approved = is_approved;
+	}
+
+	public ApproveInformation(java.lang.String reject_reason,
+			java.lang.String solution, java.lang.Boolean is_approved) {
 		this.reject_reason = reject_reason;
+		this.solution = solution;
+		this.is_approved = is_approved;
 	}
 
 }

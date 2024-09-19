@@ -30,8 +30,6 @@ public class RuleFieldConfig implements java.io.Serializable {
 	private java.lang.Boolean is_invalid_warning_null;
 	@org.kie.api.definition.type.Label("Match run order")
 	private java.lang.Integer match_run_order;
-	@org.kie.api.definition.type.Label("Merge group")
-	private java.lang.String marge_group;
 	@org.kie.api.definition.type.Label("Merge master os")
 	private java.lang.String merge_master_os;
 	@org.kie.api.definition.type.Label("Merge priority os")
@@ -42,11 +40,14 @@ public class RuleFieldConfig implements java.io.Serializable {
 	@org.kie.api.definition.type.Label("Is rule field config?")
 	private java.lang.Boolean rule_field_config;
 
-	@org.kie.api.definition.type.Label(value = "Approve?")
+	@org.kie.api.definition.type.Label("Approve?")
 	private java.lang.Boolean approve_flag;
 
-	@org.kie.api.definition.type.Label(value = "Reject reason")
+	@org.kie.api.definition.type.Label("Reject reason")
 	private java.lang.String reject_reason;
+
+	@org.kie.api.definition.type.Label(value = "Merge group")
+	private java.lang.String merge_group;
 
 	public RuleFieldConfig() {
 	}
@@ -140,14 +141,6 @@ public class RuleFieldConfig implements java.io.Serializable {
 		this.match_run_order = match_run_order;
 	}
 
-	public java.lang.String getMarge_group() {
-		return this.marge_group;
-	}
-
-	public void setMarge_group(java.lang.String marge_group) {
-		this.marge_group = marge_group;
-	}
-
 	public java.lang.String getMerge_master_os() {
 		return this.merge_master_os;
 	}
@@ -197,18 +190,27 @@ public class RuleFieldConfig implements java.io.Serializable {
 		this.reject_reason = reject_reason;
 	}
 
+	public java.lang.String getMerge_group() {
+		return this.merge_group;
+	}
+
+	public void setMerge_group(java.lang.String merge_group) {
+		this.merge_group = merge_group;
+	}
+
 	public RuleFieldConfig(java.lang.String id, java.lang.String rule_type,
 			java.lang.String rule_code, java.lang.String description,
 			java.util.Date to_date, java.util.Date from_date,
 			java.lang.String product_type, java.lang.String operating_system,
 			java.lang.String column_apply,
 			java.lang.Boolean is_invalid_warning_null,
-			java.lang.Integer match_run_order, java.lang.String marge_group,
+			java.lang.Integer match_run_order,
 			java.lang.String merge_master_os,
 			java.lang.String merge_priority_os,
 			java.lang.Boolean merge_is_use_time_priority,
 			java.lang.Boolean rule_field_config,
-			java.lang.Boolean approve_flag, java.lang.String reject_reason) {
+			java.lang.Boolean approve_flag, java.lang.String reject_reason,
+			java.lang.String merge_group) {
 		this.id = id;
 		this.rule_type = rule_type;
 		this.rule_code = rule_code;
@@ -220,13 +222,13 @@ public class RuleFieldConfig implements java.io.Serializable {
 		this.column_apply = column_apply;
 		this.is_invalid_warning_null = is_invalid_warning_null;
 		this.match_run_order = match_run_order;
-		this.marge_group = marge_group;
 		this.merge_master_os = merge_master_os;
 		this.merge_priority_os = merge_priority_os;
 		this.merge_is_use_time_priority = merge_is_use_time_priority;
 		this.rule_field_config = rule_field_config;
 		this.approve_flag = approve_flag;
 		this.reject_reason = reject_reason;
+		this.merge_group = merge_group;
 	}
 
 }
